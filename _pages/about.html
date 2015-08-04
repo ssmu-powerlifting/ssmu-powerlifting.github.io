@@ -62,28 +62,26 @@ permalink: /about/
         </div>
         -->
 
-        {% for page in site.pages %}
-          {% if page.type == "profile" %}
+        {% for profile in site.profiles_collection %}
         <div class="col-md-4 text-center">
             <div class="thumbnail">
-                <img class="img-responsive" src="{{ page.image }}" alt="" style="">
+                <img class="img-responsive" src="{{ profile.image }}" alt="" style="">
                 <div class="caption">
-                    <h3><a href="{{ page.permalink }}">{{ page.fullname }}</a><br>
-                        <small>{{ page.weightClass }}</small>
+                    <h3><a href="{{ profile.url }}">{{ profile.fullname }}</a><br>
+                        <small>{{ profile.weightClass }}</small>
                     </h3>
-                    <p>{{ page.description }}</p>
+                    <p>{{ profile.description }}</p>
                     <ul class="list-inline">
-                        <li><a href="{{ page.facebook }}"><i class="fa fa-2x fa-facebook-square"></i></a>
+                        <li><a href="{{ profile.facebook }}"><i class="fa fa-2x fa-facebook-square"></i></a>
                         </li>
-                        <li><a href="{{ page.youtube }}"><i class="fa fa-2x fa-youtube-square"></i></a>
+                        <li><a href="{{ profile.youtube }}"><i class="fa fa-2x fa-youtube-square"></i></a>
                         </li>
-                        <li><a href="{{ page.instagram }}"><i class="fa fa-2x fa-instagram"></i></a>
+                        <li><a href="{{ profile.instagram }}"><i class="fa fa-2x fa-instagram"></i></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-          {% endif %}
         {% endfor %}
 
     </div>

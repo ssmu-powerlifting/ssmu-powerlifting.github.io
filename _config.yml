@@ -14,8 +14,14 @@ markdown: kramdown
 permalink: 'pretty'
 include: ['_pages']
 
+collections:
+  profiles_collection:
+    output: true
+    permalink: /profiles/:path/
+
 defaults:
   - scope:
-      path: '_pages/profiles'
+      path: ''
+      type: profiles_collection
     values:
-      type: 'profile'
+      layout: profile

@@ -9,5 +9,4 @@ facebook: https://www.google.com/search?facebook
 youtube: https://www.google.com/search?youtube
 instagram: https://www.google.com/search?instagram
 title: jonfk
-permalink: /profiles/jonfk/
 ---

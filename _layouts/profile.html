@@ -1,0 +1,103 @@
+---
+layout: default
+---
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">{{ page.username }}
+                <small>Profile</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a>
+                </li>
+                <li class="active">Profile</li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Intro Content -->
+    <div class="row">
+        <div class="col-md-6">
+            <img class="img-responsive" src="@profile.imageUrl" alt="">
+        </div>
+        <div class="col-md-6">
+            <h3>{{ page.fullname }}</h3>
+            <p>{{ page.description }}</p>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Meet Records</h2>
+            <div class="table-responsive">
+            	<table class="table table-striped table-bordered">
+            	    <thead>
+            		<tr>
+            		    <th>Lifter</th>
+            		    <th>Weight Class</th>
+            		    <th>Squat</th>
+            		    <th>Bench</th>
+            		    <th>Deadlift</th>
+            		    <th>Total</th>
+            		    <th>Wilks</th>
+            		    <th>Date</th>
+            		</tr>
+            	    </thead>
+            	    <tbody>
+            		<!-- @for(record <- meetRecords) { -->
+            		<tr>
+			    <td>.name</td>
+			    <td>.weightClass</td>
+			    <td>.squat</td>
+			    <td>.bench</td>
+			    <td>.deadlift</td>
+			    <td>.total</td>
+			    <td>.wilks</td>
+			    <td>.date</td>
+            		</tr>
+            	    </tbody>
+            	</table>
+            </div>
+            <!-- /.table -->
+
+            <h2 class="page-header">Training Records</h2>
+            <div class="table-responsive">
+            	<table class="table table-striped table-bordered">
+            	    <thead>
+            		<tr>
+            		    <th>Lifter</th>
+            		    <th>Weight Class</th>
+            		    <th>Squat</th>
+            		    <th>Bench</th>
+            		    <th>Deadlift</th>
+            		    <th>Total</th>
+            		    <th>Wilks</th>
+            		    <th>Date</th>
+            		</tr>
+            	    </thead>
+            	    <tbody>
+            		<!-- @for(record <- trainingRecords) { -->
+            		<tr>
+			    <td>.name</td>
+			    <td>.weightClass</td>
+			    <td>.squat</td>
+			    <td>.bench</td>
+			    <td>.deadlift</td>
+			    <td>.total</td>
+			    <td>.wilks</td>
+			    <td>.date.toString</td>
+            		</tr>
+            	    </tbody>
+            	</table>
+            </div>
+            <!-- /.table -->
+
+        </div>
+    </div>
+    <!-- /.row -->
+
+</div>
