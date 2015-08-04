@@ -1,0 +1,96 @@
+---
+layout: default
+title: about
+permalink: /about/
+---
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">About
+                <small>SSMU Powerlifting</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a>
+                </li>
+                <li class="active">About</li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Intro Content -->
+    <div class="row">
+        <div class="col-md-6">
+            <img class="img-responsive" src="/public/images/SSMUPOWER_Logo.jpg" alt="">
+        </div>
+        <div class="col-md-6">
+            <h2>About SSMU Powerlifting</h2>
+            <p>The SSMU Powerlifting Club is a group focused on improving strength, fostering friendships, crushing weights, and just having a good time. As a group training out of the McGill Fitness Center, we offer students (and McGill community members) a chance to train together, perfect technique, discuss training programs, all within the goal of becoming competitive powerlifters.</p>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Team Members -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Meet the Team</h2>
+        </div>
+
+        <!-- Example
+        <div class="col-md-4 text-center">
+        <div class="thumbnail">
+        <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+        <div class="caption">
+        <h3>John Smith<br>
+        <small>Job Title</small>
+        </h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
+        <ul class="list-inline">
+        <li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
+        </li>
+        <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
+        </li>
+        <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
+        </li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        -->
+
+        {% for page in site.pages %}
+          {% if page.type == "profile" %}
+        <div class="col-md-4 text-center">
+            <div class="thumbnail">
+                <img class="img-responsive" src="{{ page.image }}" alt="" style="">
+                <div class="caption">
+                    <h3><a href="{{ page.permalink }}">{{ page.fullname }}</a><br>
+                        <small>{{ page.weightClass }}</small>
+                    </h3>
+                    <p>{{ page.description }}</p>
+                    <ul class="list-inline">
+                        <li><a href="{{ page.facebook }}"><i class="fa fa-2x fa-facebook-square"></i></a>
+                        </li>
+                        <li><a href="{{ page.youtube }}"><i class="fa fa-2x fa-youtube-square"></i></a>
+                        </li>
+                        <li><a href="{{ page.instagram }}"><i class="fa fa-2x fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+          {% endif %}
+        {% endfor %}
+
+    </div>
+    <!-- /.row -->
+
+
+    <hr>
+
+</div>
+<!-- /.container -->
