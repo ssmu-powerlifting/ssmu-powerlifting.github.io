@@ -49,6 +49,7 @@ layout: default
             	    </thead>
             	    <tbody>
                         {% for record in site.data.comp_records %}
+                        {% if record.username == page.username %}
             		<tr>
 			    <td>{{ page.fullname }}</td>
 			    <td>{{ record.weightClass }}</td>
@@ -59,6 +60,7 @@ layout: default
 			    <td>{{ record.wilks }}</td>
 			    <td>{{ record.date }}</td>
             		</tr>
+                        {% endif %}
                         {% endfor %}
             	    </tbody>
             	</table>
@@ -82,6 +84,7 @@ layout: default
             	    </thead>
             	    <tbody>
                         {% for record in site.data.train_records %}
+                        {% if record.username == page.username %}
             		<tr>
 			    <td>{{ page.fullname }}</td>
 			    <td>{{ record.weightClass }}</td>
@@ -92,6 +95,7 @@ layout: default
 			    <td>{{ record.wilks }}</td>
 			    <td>{{ record.date }}</td>
             		</tr>
+                        {% endif %}
                         {% endfor %}
             	    </tbody>
             	</table>
