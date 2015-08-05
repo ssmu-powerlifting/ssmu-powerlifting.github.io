@@ -48,17 +48,18 @@ layout: default
             		</tr>
             	    </thead>
             	    <tbody>
-            		<!-- @for(record <- meetRecords) { -->
+                        {% for record in site.data.comp_records %}
             		<tr>
-			    <td>.name</td>
-			    <td>.weightClass</td>
-			    <td>.squat</td>
-			    <td>.bench</td>
-			    <td>.deadlift</td>
-			    <td>.total</td>
-			    <td>.wilks</td>
-			    <td>.date</td>
+			    <td>{{ page.fullname }}</td>
+			    <td>{{ record.weightClass }}</td>
+			    <td>{{ record.squat }}</td>
+			    <td>{{ record.bench }}</td>
+			    <td>{{ record.deadlift }}</td>
+			    <td>{{ record.total }}</td>
+			    <td>{{ record.wilks }}</td>
+			    <td>{{ record.date }}</td>
             		</tr>
+                        {% endfor %}
             	    </tbody>
             	</table>
             </div>
@@ -80,17 +81,18 @@ layout: default
             		</tr>
             	    </thead>
             	    <tbody>
-            		<!-- @for(record <- trainingRecords) { -->
+                        {% for record in site.data.train_records %}
             		<tr>
-			    <td>.name</td>
-			    <td>.weightClass</td>
-			    <td>.squat</td>
-			    <td>.bench</td>
-			    <td>.deadlift</td>
-			    <td>.total</td>
-			    <td>.wilks</td>
-			    <td>.date.toString</td>
+			    <td>{{ page.fullname }}</td>
+			    <td>{{ record.weightClass }}</td>
+			    <td>{{ record.squat }}</td>
+			    <td>{{ record.bench }}</td>
+			    <td>{{ record.deadlift }}</td>
+			    <td>{{ record.total }}</td>
+			    <td>{{ record.wilks }}</td>
+			    <td>{{ record.date }}</td>
             		</tr>
+                        {% endfor %}
             	    </tbody>
             	</table>
             </div>
