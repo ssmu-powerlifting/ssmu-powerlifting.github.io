@@ -135,7 +135,7 @@ permalink: /records/
             	    </thead>
             	    <tbody>
                         {% for record in site.data.train_records %}
-                        {% if !record.female %}
+                        {% if record.gender == 'male' %}
                         {% for profile in site.profiles_collection %}
                         {% if profile.username == record.username %}
             		<tr>
@@ -176,7 +176,7 @@ permalink: /records/
             	    </thead>
             	    <tbody>
                         {% for record in site.data.train_records %}
-                        {% if record.female %}
+                        {% if record.gender == 'female' %}
                         {% for profile in site.profiles_collection %}
                         {% if profile.username == record.username %}
             		<tr>
