@@ -2,11 +2,10 @@
 fullname: Jonathan Fok kan
 nickname: jfk
 username: jonfk
-image: images/jonfk.jpg
-weightClass: 66 kg
-description: I am a wolf
+image: /assets/images/profiles/jfk.png
+weightClass: 66.0 kg
+description: Software Engineer who likes to lift things up and put them down.
 facebook: https://www.google.com/search?facebook
-youtube: https://www.google.com/search?youtube
-instagram: https://www.google.com/search?instagram
-title: jonfk
+youtube: https://www.youtube.com/user/jonesdoe1
+instagram: http://instagram.com/jonender
 ---
