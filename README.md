@@ -9,7 +9,6 @@ In the file fill in the following attributes between the `---`, with no whitespa
 ```yaml
 ---
 fullname: Jonathan Fok kan
-nickname: jfk
 username: jonfk
 image: /assets/images/profiles/jfk.png
 weightClass: 66.0 kg
